@@ -12,16 +12,8 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    <style>
-        input:checked + span {
-            text-decoration: line-through;
-        }
-    </style>
   </head>
   <body>
-    <div id="image">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEUAAAD////6+vp1dXXExMRJSUkFBQV4eHj5+fl0dHSUlJTV1dVBQUFERETAwMAICAhvb2/WclEaAAABe0lEQVR4nO3YWw6CUBAE0TsXRRB87H+1QoxLIKTaqhXMSf9N68lNvar1fp+H4ZbYzlqmVrW24C7Vpnq08ew7Duv13IXXZOG2Yd+EuY3hwlEhPoX8vsIKFrZ4Yf6GCvkp5KeQn0J+Cvkp5KeQn0J+CvkpTChdmL+hQn4K+Snkp5CfQn4K+Snkp5CfQn4K+eUL/SbyU8hPIT+F/BTyU8hPIT+F/BTyU8hPYULpwvwNFfJTyE8hP4X8FPJTyE8hP4X8FPJTyC9f6DeRn0J+Cvkp5KeQn0J+Cvkp5KeQn0J+ChNKF+ZvqJCfQn4K+Snkp5CfQn4K+Snkp5CfQn75Qr+J/BTyU8hPIT+F/BTyU8hPIT+F/BTyU5hQujB/Q4X8FPJTyE8hP4X8FPJTyE8hP4X8FPLLF/pN5KeQn0J+Cvkp5KeQn0J+Cvkp5KeQn8KE0oX5Gyrk9y/CHi+sepx9yIGFbzj+NlzPvuTInrvw/p7nIbH3MN+WTTht9ci+sA+skSFdeu63eAAAAABJRU5ErkJggg==" width="100" height="100">
-    </div>
     <div
       class="container rounded-3 border border-dark my-5 bg-white"
     >
@@ -37,10 +29,20 @@
             />
           </div>
           <div class="col-2">
-            <button id="add-btn" class="btn btn-dark">Add</button>
+            <button class="btn btn-dark" id="add-btn">Add</button>
           </div>
           <div class="col-2">
-            <button id="clear-btn" class="btn btn-dark">Clear</button>
+            <select class="form-select" name="sort" id="sort">
+              <option selected disabled value="0">Сортировка:</option>
+              <option value="1">По умолчанию</option>
+              <option value="2">По алфавиту</option>
+            </select>
+            <select class="form-select" name="filter" id="filter">
+              <option selected disabled value="0">Фильтрация:</option>
+              <option value="1">По умолчанию</option>
+              <option value="2">Выполнено</option>
+              <option value="3">Не выполнено</option>
+            </select>
           </div>
         </div>
       </div>
@@ -48,7 +50,6 @@
       <div class="row rounded bg-white">
         <div class="col-12">
           <ul class="list-group" id="list">
-
             <!-- <li class="my-2 py-3 list-group-item" id="list">
               <div class="row">
                 <div class="col-1">
@@ -67,6 +68,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="doto.js"></script>
   </body>
 </html>
